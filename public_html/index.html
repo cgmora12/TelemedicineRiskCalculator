@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">-->
+        <meta name="description" content="Telemedicine risk calculator">
+        <meta name="author" content="César González Mora">
+        <link rel="icon" href="../images/telemedicina.ico">
+
+        <meta property="og:site_name" content="Telemedicine risk calculator">
+        <meta property="og:title" content="Telemedicine risk calculator">
+        <meta property="og:description" content="Telemedicine risk calculator">
+        <!--<meta property="og:image" content="http://www.riesgostelemedicina.com/icon.png">
+        <meta property="og:url" content="http://www.riesgostelemedicina.com">-->
+        <meta name="keywords" content="Telemedicine, risk, calculator">
+
+        <title>Telemedicine risk calculator</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
+        <!-- Bootstrap theme -->
+        <link href="./css/bootstrap-theme.min.css" rel="stylesheet">        
+        <!-- Jquery core CSS -->
+        <link href="./css/jquery-ui.css" rel="stylesheet">
+        <!-- Jquery theme -->
+        <link href="./css/jquery-ui.theme.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="./css/custom.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./css/fontawesome-stars.css">
+        <link rel="stylesheet" href="./css/bars-movie.css">
+        <link rel="stylesheet" href="./css/bars-pill.css">
+        <link rel="stylesheet" href="./css/bars-reversed.css">
+        <link rel="stylesheet" href="./css/bars-1to10.css">
+    </head>
+	<body>
+        <div class="container theme-showcase" role="main">
+            <h1>Telemedicine risk calculator</h1>
+
+            <br />
+            
+            <label for="tuq6" class="form-label">I like using the system</label>
+            <!--<input id="tuq6" type="range" class="form-range slider" min="1" max="7" step="1" value="7" style="max-width:300px" oninput="tuqchanger(this);">
+            <output id="tuq6output">Totally agree</output>-->
+            <select name="tuq6" id="tuq6">
+                <option value="1">Totally disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4" selected>Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Totally agree</option>
+            </select>
+            <br />
+            <br />
+            <br />
+
+            <label for="tuq8" class="form-label">I can hear the doctor clearly using the telemedicine system</label>
+            <!--<input id="tuq8" type="range" class="form-range slider" min="1" max="7" step="1" value="7" style="max-width:300px" oninput="tuqchanger(this);">
+            <output id="tuq8output">Totally agree</output>-->
+            <select name="tuq8" id="tuq8">
+                <option value="1">Totally disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4" selected>Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Totally agree</option>
+            </select>
+            <br />
+            <br />
+            <br />
+            
+            <label for="tuq10" class="form-label">I think the visits provided over the telemedicine system are the same as in-person visits</label>
+            <select name="tuq10" id="tuq10">
+                <option value="1">Totally disagree</option>
+                <option value="2">Strongly disagree</option>
+                <option value="3">Disagree</option>
+                <option value="4" selected>Neither agree nor disagree</option>
+                <option value="5">Agree</option>
+                <option value="6">Strongly agree</option>
+                <option value="7">Totally agree</option>
+            </select>
+            <br />
+            <br />
+            <br />
+            
+            <label for="age" class="form-label">Age</label>
+            <!--<input id="age" type="range" class="form-range slider" min="0" max="100" step="1" value="0" style="max-width:300px" oninput="ageoutput.value = age.value">
+            <output id="ageoutput">0</output>-->
+            <input type="number" class="form-control ageInput" placeholder="Your age">
+            <br />
+            <br />
+            
+            <label for="gender" class="form-label">Gender</label>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" style="margin-left: 15px;">
+              <label class="btn btn-secondary active">
+                <input type="radio" name="genderRadio" id="male" value="male" autocomplete="off" checked> Male
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="genderRadio" id="female" value="female" autocomplete="off"> Female
+              </label>
+            </div>
+
+            <br />
+
+            <button type="button" class="btn btn-lg btn-primary float" onclick="calculateProbability()">Calculate</button>
+            <h3 id="gss" style="display: inline;"></h3>
+            <h3 id="soc" style="display: inline;"></h3>
+        </div>
+        <br />
+
+        <script src="./scripts/jquery.js"></script>
+        <script src="./scripts/jquery-ui.js"></script>
+        <script src="./scripts/jquery.barrating.js"></script>
+        <script src="./scripts/bootstrap.min.js"></script>
+        <script language="javascript" src="./scripts/calculadora.js"></script>
+    </body>
+</html>
